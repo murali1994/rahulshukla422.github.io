@@ -463,7 +463,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PostService = (function () {
     function PostService(http) {
         this.http = http;
-        this.postsURL = 'http://discussionforumapi.azurewebsites.net/api/post';
+        this.postsURL = 'https://discussionforumapi.azurewebsites.net/api/post';
         var date = new Date().toLocaleString();
         console.log(date);
     }
