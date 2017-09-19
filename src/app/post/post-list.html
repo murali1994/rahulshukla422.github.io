@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="row">
+		<h2><b> {{hide?'Welcome to Dicussion Forum':'Post New Questions'}}</b> <br/></h2>
+		<button type="submit" (click)="showDiv()" *ngIf="hide" class="btn btn-info">Post Your Question</button> <br/> <br/>
+
+		<!--This code for the adding new post-->
+		<form #form (ngSubmit)="addPost(post)" *ngIf="show">
+			<input type="text" class="form-control" name="postTitle" [(ngModel)]="post.postTitle" #postTitle="ngModel" placeholder="Enter your title"
+				required /> <br/>
+
+			<input type="text" class="form-control" name="postTitle" [(ngModel)]="post.postDesc" #postTitle="ngModel" placeholder="Enter your details here"
+				required />
+			<br/>
+
+			<button class="btn btn-success" type="submit">Post Question</button><br/><br/>
+		</form>
+		<!-- This code for search pipes-->
+		<input type="text" [(ngModel)]="filter" class="form-control" placeholder="Search posts here" /> <br/>
+	</div>
+	<!--This code for the displaying the post-->
+	<div class="row well" *ngFor="let post of posts | postFilter :filter">
+		<h3> <b>{{post.postTitle}}</b></h3>
+		<pre> {{post.postDesc}}</pre>
+		<abbr style="color:blue; font-size:small;">{{post.postedDate  | date:"MMM dd, yyyy, hh:mm:ss a"}}</abbr>
+	</div>
+</div>
+<div class="modal">
+	<div class="modal-container">
+		<div class="modal-header">
+			<h3>Add New Post</h3>
+		</div>
+		<div class="modal-body">
+
+		</div>
+		<div class="modal-footer">
+
+		</div>
+	</div>
+</div>

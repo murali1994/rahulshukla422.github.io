@@ -1,0 +1,36 @@
+<h1><b>Welcome to Discussion Forum</b></h1>
+<div class="container">
+	<div class="col-md-8">
+		<img src="../app/images/discussionforum.jpg" alt="Discussion Forum" class="img-responsive"> <br/><br/>
+		<p>
+			Discussion forum is one of the best online portal for the havig technical discussion. You can ask questions and post as well
+			as post your answers. This has main aim to spread knowledge and solve the peoples technical queries. Its the best platform
+			for people to show their expertise to solve the complex problem of the others. I belive, sharing knowledge will never
+			reduce yours. It will always enhance and sharp your skills.</p>
+		<br/>
+		<p>So join hand to let this platform for the people to the people. <b>"Share knowledge and help others"</b>
+		</p>
+		<br/>
+		<a class="btn btn-primary" routerLink='../post-list'>Ask your questions ?</a> <br/><br/><br/><br/>
+	</div>
+
+
+	<!--This code for the displaying the post-->
+	<div class="well col-md-4 panel panel-default">
+		<table class="table">
+			<tr class="active">
+				<td colspan="2">
+					<h4> <b>Latest Questions</b><img src="../app/images/new.gif" /></h4>
+				</td>
+			</tr>
+			<tr class="row" *ngFor="let post of posts">
+				<td>
+					<h4><a routerLink='../post-details/{{post.postId}}'> {{post.postTitle}}</a></h4>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+
+</div>
