@@ -144,7 +144,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/contact/contact-details.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1> Hi from contact compoent </h1>\r\n\r\n<br/> <br/> <br/>\r\n<a class=\"btn btn-primary\" routerLink='../home'>Back to Home</a> <br/><br/><br/><br/>\r\n<br/>"
+module.exports = "<h1> Hi from contact Component </h1>\r\n\r\n<br/> <br/> <br/>\r\n<a class=\"btn btn-primary\" routerLink='../home'>Back to Home</a> <br/><br/><br/><br/>\r\n<br/>"
 
 /***/ }),
 
